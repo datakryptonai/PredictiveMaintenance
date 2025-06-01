@@ -1,32 +1,19 @@
-# Predictive Maintenance Data Pipeline
+# Tableau Dashboard Setup
 
-This project implements an end-to-end data pipeline for predictive maintenance using Apache Spark, Python, and Tableau.
+This folder contains instructions to connect Tableau Desktop to the processed data files.
 
-## Features
+## Connecting to Data
 
-- Data ingestion, cleaning, and transformation pipelines
-- Feature engineering for machine learning
-- Workflow orchestration with Apache Airflow
-- Interactive Tableau dashboard for visualization
+- Open Tableau Desktop.
+- Connect to the Parquet file located at `../data/processed/features.parquet`.
+- Build visualizations:
+  - Line charts for sensor trends (temperature, vibration).
+  - Color-coded risk score tables.
+  - Bar charts for predicted failure counts.
+- Add filters for `machine_id` and `timestamp` ranges.
 
-## Setup
+## Recommended Dashboard Layout
 
-1. Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-2. Run Airflow and start the ETL pipeline:
-
-```bash
-airflow dags trigger predictive_maintenance_etl
-```
-
-3. Explore the Tableau dashboard connecting to processed data.
-
-## Author
-
-Debjyoti Kar — Data Architect | Data Engineer | Data Analyst  
-Email: debjyoti@datakrypton.ai  
-Website: [www.datakrypton.ai](https://www.datakrypton.ai)
+- Top section: Equipment status summary with risk scores.
+- Middle: Time series line charts for sensor metrics.
+- Bottom: Predicted failure alerts and maintenance scheduling.
